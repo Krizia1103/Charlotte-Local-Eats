@@ -1,0 +1,25 @@
+{
+  "name": "clt-dining-guide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Uptown Charlotte dining guide for traveling colleagues",
+  "scripts": {
+    "dev": "node ./node_modules/next/dist/bin/next dev",
+    "build": "node ./node_modules/next/dist/bin/next build",
+    "start": "node ./node_modules/next/dist/bin/next start"
+  },
+  "dependencies": {
+    "framer-motion": "^11.11.17",
+    "next": "^15.5.20",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.3"
+  }
+}
