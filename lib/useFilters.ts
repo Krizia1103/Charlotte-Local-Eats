@@ -121,14 +121,20 @@ function sortGroup(list: Restaurant[]): Restaurant[] {
 
 export function categoryLabel(category: Category): string {
   switch (category) {
+    case "breakfast":
+      return "Breakfast";
     case "coffee":
-      return "Coffee / Smoothie";
+      return "Coffee";
     case "lunch":
       return "Lunch";
     case "dinner":
-      return "Dinner / Client Meals";
+      return "Dinner";
     case "happyhour":
       return "Happy Hour";
+    case "clientFriendly":
+      return "Client Friendly";
+    case "desserts":
+      return "Desserts";
   }
 }
 
@@ -137,7 +143,15 @@ export function getCategoryGroups(
   category?: Category
 ): RestaurantGroup[] {
   if (!category) {
-    const categories: Category[] = ["coffee", "lunch", "dinner", "happyhour"];
+    const categories: Category[] = [
+      "breakfast",
+      "coffee",
+      "lunch",
+      "dinner",
+      "happyhour",
+      "clientFriendly",
+      "desserts",
+    ];
     return categories
       .map((c) => ({
         title: categoryLabel(c),

@@ -125,14 +125,14 @@ export default function RestaurantCard({
 
         <div className="mt-4 grid grid-cols-3 gap-2">
           <a
-            href={restaurant.mapsUrl}
+            href={restaurant.drivingDirectionsUrl}
             target="_blank"
             rel="noopener noreferrer"
             onClick={stop}
             className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-navy px-2 py-2 text-xs font-semibold text-white transition hover:bg-navy-deep"
           >
             <PinIcon width={15} height={15} />
-            Maps
+            Drive
           </a>
           <a
             href={restaurant.websiteUrl}
@@ -160,6 +160,37 @@ export default function RestaurantCard({
             </span>
           )}
         </div>
+        {restaurant.uberEatsUrl || restaurant.doorDashUrl ? (
+          <div className="mt-3 border-t border-lightgray pt-3">
+            <p className="text-[11px] font-semibold uppercase tracking-wide text-slate">
+              Order delivery
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {restaurant.uberEatsUrl ? (
+                <a
+                  href={restaurant.uberEatsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={stop}
+                  className="inline-flex items-center justify-center rounded-lg bg-[#06c167] px-3 py-2 text-xs font-semibold text-white transition hover:bg-[#05a959]"
+                >
+                  Uber Eats
+                </a>
+              ) : null}
+              {restaurant.doorDashUrl ? (
+                <a
+                  href={restaurant.doorDashUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={stop}
+                  className="inline-flex items-center justify-center rounded-lg bg-[#ff3008] px-3 py-2 text-xs font-semibold text-white transition hover:bg-[#db2405]"
+                >
+                  DoorDash
+                </a>
+              ) : null}
+            </div>
+          </div>
+        ) : null}
       </motion.article>
 
       <RestaurantDetail

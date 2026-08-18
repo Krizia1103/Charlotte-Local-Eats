@@ -177,51 +177,82 @@ export default function RestaurantDetail({
               ) : null}
             </div>
 
-            <div className="sticky bottom-0 -mx-5 -mb-5 mt-5 grid grid-cols-4 gap-2 border-t border-lightgray bg-white/95 px-5 py-4 backdrop-blur">
-              <a
-                href={restaurant.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="col-span-2 inline-flex items-center justify-center gap-1.5 rounded-lg bg-navy px-3 py-2.5 text-sm font-semibold text-white transition hover:bg-navy-deep"
-              >
-                <PinIcon width={16} height={16} />
-                Open Maps
-              </a>
-              <a
-                href={restaurant.websiteUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open website"
-                className="inline-flex items-center justify-center rounded-lg border border-lightgray bg-white px-3 py-2.5 text-charcoal transition hover:border-accent hover:text-accent"
-              >
-                <GlobeIcon width={18} height={18} />
-              </a>
-              <button
-                type="button"
-                onClick={() => toggleSaved(restaurant.id)}
-                aria-pressed={saved}
-                aria-label={saved ? "Remove from saved" : "Save restaurant"}
-                className={`inline-flex items-center justify-center rounded-lg border px-3 py-2.5 transition ${
-                  saved
-                    ? "border-accent bg-accent-soft text-accent"
-                    : "border-lightgray bg-white text-charcoal hover:border-accent hover:text-accent"
-                }`}
-              >
-                {saved ? (
-                  <BookmarkFilledIcon width={18} height={18} />
-                ) : (
-                  <BookmarkIcon width={18} height={18} />
-                )}
-              </button>
-              {restaurant.phone ? (
+            <div className="sticky bottom-0 -mx-5 -mb-5 mt-5 space-y-3 border-t border-lightgray bg-white/95 px-5 py-4 backdrop-blur">
+              <div className="grid grid-cols-4 gap-2">
                 <a
-                  href={telHref(restaurant.phone)}
-                  aria-label="Call restaurant"
-                  className="col-span-4 inline-flex items-center justify-center gap-1.5 rounded-lg border border-lightgray bg-white px-3 py-2 text-sm font-semibold text-charcoal transition hover:border-accent hover:text-accent"
+                  href={restaurant.drivingDirectionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="col-span-2 inline-flex items-center justify-center gap-1.5 rounded-lg bg-navy px-3 py-2.5 text-sm font-semibold text-white transition hover:bg-navy-deep"
                 >
-                  <PhoneIcon width={16} height={16} />
-                  Call {restaurant.phone}
+                  <PinIcon width={16} height={16} />
+                  Drive
                 </a>
+                <a
+                  href={restaurant.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open website"
+                  className="inline-flex items-center justify-center rounded-lg border border-lightgray bg-white px-3 py-2.5 text-charcoal transition hover:border-accent hover:text-accent"
+                >
+                  <GlobeIcon width={18} height={18} />
+                </a>
+                <button
+                  type="button"
+                  onClick={() => toggleSaved(restaurant.id)}
+                  aria-pressed={saved}
+                  aria-label={saved ? "Remove from saved" : "Save restaurant"}
+                  className={`inline-flex items-center justify-center rounded-lg border px-3 py-2.5 transition ${
+                    saved
+                      ? "border-accent bg-accent-soft text-accent"
+                      : "border-lightgray bg-white text-charcoal hover:border-accent hover:text-accent"
+                  }`}
+                >
+                  {saved ? (
+                    <BookmarkFilledIcon width={18} height={18} />
+                  ) : (
+                    <BookmarkIcon width={18} height={18} />
+                  )}
+                </button>
+                {restaurant.phone ? (
+                  <a
+                    href={telHref(restaurant.phone)}
+                    aria-label="Call restaurant"
+                    className="col-span-4 inline-flex items-center justify-center gap-1.5 rounded-lg border border-lightgray bg-white px-3 py-2 text-sm font-semibold text-charcoal transition hover:border-accent hover:text-accent"
+                  >
+                    <PhoneIcon width={16} height={16} />
+                    Call {restaurant.phone}
+                  </a>
+                ) : null}
+              </div>
+              {restaurant.uberEatsUrl || restaurant.doorDashUrl ? (
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-wide text-slate">
+                    Order delivery
+                  </p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {restaurant.uberEatsUrl ? (
+                      <a
+                        href={restaurant.uberEatsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-lg bg-[#06c167] px-3 py-2 text-xs font-semibold text-white transition hover:bg-[#05a959]"
+                      >
+                        Uber Eats
+                      </a>
+                    ) : null}
+                    {restaurant.doorDashUrl ? (
+                      <a
+                        href={restaurant.doorDashUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-lg bg-[#ff3008] px-3 py-2 text-xs font-semibold text-white transition hover:bg-[#db2405]"
+                      >
+                        DoorDash
+                      </a>
+                    ) : null}
+                  </div>
+                </div>
               ) : null}
             </div>
           </motion.div>

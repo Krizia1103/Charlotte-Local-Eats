@@ -17,7 +17,7 @@ export default function AppHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-hairline bg-offwhite/85 backdrop-blur-md">
       <div aria-hidden className="h-[3px] w-full bg-gradient-to-r from-navy via-accent to-accent-bright" />
-      <div className="mx-auto flex h-[60px] max-w-3xl items-center justify-between px-4">
+      <div className="mx-auto flex h-[60px] max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link href="/" className="group flex items-center gap-2.5 leading-tight">
           <span
             aria-hidden
@@ -27,7 +27,7 @@ export default function AppHeader() {
           </span>
           <span className="flex flex-col">
             <span className="font-display text-[17px] font-semibold text-navy">
-              Dining Guide
+              Charlotte Office Eats
             </span>
             <span className="text-[10.5px] font-medium uppercase tracking-[0.13em] text-slate">
               Uptown Charlotte
@@ -35,12 +35,24 @@ export default function AppHeader() {
           </span>
         </Link>
 
+        <nav className="hidden items-center gap-1 md:flex" aria-label="Primary navigation">
+          {MENU_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="rounded-md px-3 py-2 text-sm font-medium text-charcoal transition hover:bg-accent-soft hover:text-accent"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
         <button
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="grid h-11 w-11 place-items-center rounded-full border border-lightgray bg-white text-charcoal transition hover:border-accent hover:text-accent"
+          className="grid h-11 w-11 place-items-center rounded-full border border-lightgray bg-white text-charcoal transition hover:border-accent hover:text-accent md:hidden"
         >
           {open ? <CloseIcon /> : <MenuIcon />}
         </button>
@@ -48,11 +60,11 @@ export default function AppHeader() {
 
       {open ? (
         <div
-          className="border-t border-lightgray bg-white"
+          className="border-t border-lightgray bg-white md:hidden"
           role="dialog"
           aria-label="Navigation menu"
         >
-          <nav className="mx-auto flex max-w-3xl flex-col px-4 py-2">
+          <nav className="mx-auto flex max-w-6xl flex-col px-5 py-2 sm:px-8">
             {MENU_LINKS.map((link) => (
               <Link
                 key={link.href}

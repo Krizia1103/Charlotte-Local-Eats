@@ -1,11 +1,18 @@
 /**
  * Core data types for the CLT Dining Guide.
  *
- * The guide is organized from the office at 300 South Tryon around four
- * practical use cases: coffee/smoothies, lunch, dinner, and happy hour.
+ * The guide is organized from the office at 300 South Tryon around three
+ * meal occasions: breakfast, coffee, lunch, dinner, happy hour, client meals, and desserts.
  */
 
-export type Category = "coffee" | "lunch" | "dinner" | "happyhour";
+export type Category =
+  | "breakfast"
+  | "coffee"
+  | "lunch"
+  | "dinner"
+  | "happyhour"
+  | "clientFriendly"
+  | "desserts";
 
 export type SortOption = "recommended" | "closest" | "name";
 
@@ -32,8 +39,11 @@ export interface Restaurant {
   hasPrivateRoom: boolean;
   onUberEats: boolean;
   mapsUrl: string;
+  drivingDirectionsUrl: string;
   websiteUrl: string;
   phone: string;
+  uberEatsUrl?: string;
+  doorDashUrl?: string;
   featured?: boolean;
   notes?: string;
   privateRoomNotes?: string;

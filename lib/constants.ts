@@ -16,10 +16,16 @@ export const CATEGORIES: {
   description: string;
 }[] = [
   {
+    value: "breakfast",
+    label: "Breakfast",
+    shortLabel: "Breakfast",
+    description: "Coffee, smoothies, pastries, and lighter options before the day starts.",
+  },
+  {
     value: "coffee",
-    label: "Coffee / Smoothie",
+    label: "Coffee",
     shortLabel: "Coffee",
-    description: "Coffee, smoothies, pastries, and lighter morning options.",
+    description: "Coffee shops and cafe stops for a quick pick-me-up or informal meeting.",
   },
   {
     value: "lunch",
@@ -29,15 +35,27 @@ export const CATEGORIES: {
   },
   {
     value: "dinner",
-    label: "Dinner / Client Meals",
+    label: "Dinner",
     shortLabel: "Dinner",
-    description: "Client-ready dinners split by private-room availability.",
+    description: "Colleague and client dinners, including private-room availability.",
   },
   {
     value: "happyhour",
     label: "Happy Hour",
     shortLabel: "Happy Hour",
-    description: "After-work drinks split by walkable versus drive-worthy.",
+    description: "After-work drinks and relaxed team gatherings around Charlotte.",
+  },
+  {
+    value: "clientFriendly",
+    label: "Client Friendly",
+    shortLabel: "Client",
+    description: "Polished places for client meals, business conversations, and private events.",
+  },
+  {
+    value: "desserts",
+    label: "Desserts",
+    shortLabel: "Desserts",
+    description: "Local sweet stops for an afternoon pick-me-up or a post-meal treat.",
   },
 ];
 

@@ -16,14 +16,20 @@ export function distanceModeLabel(restaurant: Restaurant): string {
 
 export function categoryLabel(value: Restaurant["category"][number]): string {
   switch (value) {
+    case "breakfast":
+      return "Breakfast";
     case "coffee":
-      return "Coffee / Smoothie";
+      return "Coffee";
     case "lunch":
       return "Lunch";
     case "dinner":
       return "Dinner";
     case "happyhour":
       return "Happy Hour";
+    case "clientFriendly":
+      return "Client Friendly";
+    case "desserts":
+      return "Desserts";
   }
 }
 

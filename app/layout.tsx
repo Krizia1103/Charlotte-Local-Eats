@@ -19,10 +19,10 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "CLT Dining Guide | Uptown Charlotte",
+  title: "Charlotte Office Eats | Uptown Charlotte",
   description:
-    "A curated dining guide for traveling colleagues in Uptown Charlotte. Find restaurants and bars by occasion: brunch, client dinners, rooftop drinks, and more.",
-  applicationName: "CLT Dining Guide",
+    "A curated Uptown Charlotte dining guide for colleagues and clients. Find breakfast, lunch, dinner, and dessert spots with distance and private-room details.",
+  applicationName: "Charlotte Office Eats",
   keywords: [
     "Charlotte",
     "Uptown",
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     "rooftop",
   ],
   openGraph: {
-    title: "CLT Dining Guide",
-    description: "Uptown Charlotte recommendations for traveling colleagues.",
+    title: "Charlotte Office Eats",
+    description: "Uptown Charlotte recommendations for colleagues and clients.",
     type: "website",
   },
 };
@@ -55,7 +55,7 @@ export default function RootLayout({
       <body className="min-h-dvh">
         <SavedProvider>
           <AppHeader />
-          <main className="mx-auto min-h-[calc(100dvh-4rem)] max-w-3xl px-4 pb-28 pt-5">
+          <main className="mx-auto min-h-[calc(100dvh-4rem)] max-w-6xl px-5 pb-28 pt-6 sm:px-8">
             {children}
           </main>
           <BottomNav />
