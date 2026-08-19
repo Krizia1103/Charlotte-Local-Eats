@@ -867,7 +867,7 @@ export const restaurants: Restaurant[] = [
   }),
   venue({
     id: "mcninch-house",
-    name: "McNinch House",
+    name: "McNinch House · $$$$ Expensive",
     address: "511 N Church St, Charlotte, NC 28202",
     cuisine: "Fine dining",
     category: ["dinner", "clientFriendly"],
