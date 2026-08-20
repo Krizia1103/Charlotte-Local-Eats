@@ -3,6 +3,7 @@ import Link from "next/link";
 import { restaurants } from "@/data/restaurants";
 import HomeSearch from "@/components/HomeSearch";
 import MealTabBar from "@/components/MealTabBar";
+import WeatherWidget from "@/components/WeatherWidget";
 import { ArrowRightIcon } from "@/components/icons";
 import { BASE_LOCATION } from "@/lib/constants";
 
@@ -38,21 +39,28 @@ export default function HomePage() {
           }}
         />
 
-        <div className="relative max-w-xl px-6 py-9 text-white sm:px-10">
-          <div className="flex items-center gap-2.5">
-            <span aria-hidden className="rule-accent" />
-            <p className="eyebrow text-accent-bright/90">McKinsey Restaurant Guide</p>
+        <div className="relative flex flex-col gap-5 px-6 py-9 text-white sm:px-10 md:flex-row md:items-start md:justify-between">
+          <div className="max-w-xl">
+            <div className="flex items-center gap-2.5">
+              <span aria-hidden className="rule-accent" />
+              <p className="eyebrow text-accent-bright/90">McKinsey Restaurant Guide</p>
+            </div>
+            <h1 className="font-display mt-4 text-[34px] font-semibold leading-[1.08] drop-shadow-sm sm:text-5xl">
+              Charlotte Office{" "}
+              <span className="inline-flex items-center gap-2 whitespace-nowrap">
+                Eats
+                <WeatherWidget compact className="md:hidden" />
+              </span>
+            </h1>
+            <p className="mt-4 max-w-md text-sm leading-6 text-white/78">
+              Local breakfast, lunch, dinner, and dessert spots for colleagues,
+              clients, and team breaks.
+            </p>
+            <div className="mt-7">
+              <HomeSearch />
+            </div>
           </div>
-          <h1 className="font-display mt-4 text-[34px] font-semibold leading-[1.08] drop-shadow-sm sm:text-5xl">
-            Charlotte Office Eats
-          </h1>
-          <p className="mt-4 max-w-md text-sm leading-6 text-white/78">
-            Local breakfast, lunch, dinner, and dessert spots for colleagues,
-            clients, and team breaks.
-          </p>
-          <div className="mt-7">
-            <HomeSearch />
-          </div>
+          <WeatherWidget className="hidden shrink-0 md:block" />
         </div>
       </section>
 
