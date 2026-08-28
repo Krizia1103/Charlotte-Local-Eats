@@ -26,8 +26,6 @@ export function categoryLabel(value: Restaurant["category"][number]): string {
       return "Dinner";
     case "happyhour":
       return "Happy Hour";
-    case "clientFriendly":
-      return "Client Friendly";
     case "desserts":
       return "Desserts";
   }

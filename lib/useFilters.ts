@@ -131,8 +131,6 @@ export function categoryLabel(category: Category): string {
       return "Dinner";
     case "happyhour":
       return "Happy Hour";
-    case "clientFriendly":
-      return "Client Friendly";
     case "desserts":
       return "Desserts";
   }
@@ -149,7 +147,6 @@ export function getCategoryGroups(
       "lunch",
       "dinner",
       "happyhour",
-      "clientFriendly",
       "desserts",
     ];
     return categories

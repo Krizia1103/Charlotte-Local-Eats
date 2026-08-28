@@ -640,7 +640,7 @@ export const restaurants: Restaurant[] = [
     name: "The Fig Tree",
     address: "1601 E 7th St, Charlotte, NC 28204",
     cuisine: "Fine dining",
-    category: ["dinner", "clientFriendly"],
+    category: ["dinner"],
     description:
       "Fine dining in the historic Lucas House with a French- and Italian-influenced menu.",
     whyGo: "Classic special-occasion Charlotte restaurant with intimate rooms.",
@@ -718,7 +718,7 @@ export const restaurants: Restaurant[] = [
     name: "Angeline's",
     address: "303 S Church St, Charlotte, NC 28202",
     cuisine: "Italian",
-    category: ["dinner", "clientFriendly"],
+    category: ["dinner"],
     description:
       "Italian restaurant in the Kimpton Tryon Park Hotel with pastas, seafood, and polished service.",
     whyGo: "Easy walk, upscale but approachable, and strong private dining setup.",
@@ -832,7 +832,7 @@ export const restaurants: Restaurant[] = [
     name: "Eddie V's",
     address: "101 S Tryon St, Charlotte, NC 28280",
     cuisine: "Seafood / Steakhouse",
-    category: ["dinner", "clientFriendly"],
+    category: ["dinner"],
     description:
       "Upscale seafood and steakhouse chain with a business-dinner feel and live music lounge.",
     whyGo: "A safe, polished option for clients who expect steakhouse-level service.",
@@ -870,7 +870,7 @@ export const restaurants: Restaurant[] = [
     name: "McNinch House · $$$$ Expensive",
     address: "511 N Church St, Charlotte, NC 28202",
     cuisine: "Fine dining",
-    category: ["dinner", "clientFriendly"],
+    category: ["dinner"],
     description:
       "Historic Fourth Ward fine dining restaurant in a restored Victorian home.",
     whyGo: "A memorable, intimate Charlotte setting for special client dinners.",
@@ -1022,7 +1022,7 @@ export const restaurants: Restaurant[] = [
     name: "Grand Bohemian",
     address: "201 W Trade St, Charlotte, NC 28202",
     cuisine: "Hotel bar / Cocktails",
-    category: ["dinner", "happyhour", "clientFriendly"],
+    category: ["dinner", "happyhour"],
     description:
       "Stylish hotel bar setting at the Grand Bohemian with cocktails and small plates.",
     whyGo: "Walkable and upscale enough for a polished post-work drink.",
@@ -1225,7 +1225,7 @@ export const restaurants: Restaurant[] = [
     name: "204 North Kitchen & Cocktails",
     address: "204 N Tryon St, Charlotte, NC 28202",
     cuisine: "New American",
-    category: ["clientFriendly"],
+    category: ["dinner"],
     description:
       "Uptown New American restaurant with craft cocktails, an extensive wine list, and dedicated private event spaces.",
     whyGo: "A central, flexible choice for a client meal, business lunch, or private event.",
@@ -1776,7 +1776,7 @@ export const restaurants: Restaurant[] = [
     name: "Rooster's Wood-Fired Kitchen",
     address: "150 N College St, Charlotte, NC 28202",
     cuisine: "New American / Wood-fired",
-    category: ["clientFriendly"],
+    category: ["dinner"],
     description:
       "Chef-driven Uptown restaurant featuring seasonal, locally sourced food and wood-fired cooking.",
     whyGo: "A polished, locally rooted choice for a client meal with dependable service and private event options.",

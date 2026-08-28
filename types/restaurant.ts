@@ -2,7 +2,7 @@
  * Core data types for the CLT Dining Guide.
  *
  * The guide is organized from the office at 300 South Tryon around three
- * meal occasions: breakfast, coffee, lunch, dinner, happy hour, client meals, and desserts.
+ * meal occasions: breakfast, coffee, lunch, dinner, happy hour, and desserts.
  */
 
 export type Category =
@@ -11,7 +11,6 @@ export type Category =
   | "lunch"
   | "dinner"
   | "happyhour"
-  | "clientFriendly"
   | "desserts";
 
 export type SortOption = "recommended" | "closest" | "name";

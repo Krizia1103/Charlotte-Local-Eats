@@ -46,12 +46,6 @@ export const CATEGORIES: {
     description: "After-work drinks and relaxed team gatherings around Charlotte.",
   },
   {
-    value: "clientFriendly",
-    label: "Client Friendly",
-    shortLabel: "Client",
-    description: "Polished places for client meals, business conversations, and private events.",
-  },
-  {
     value: "desserts",
     label: "Desserts",
     shortLabel: "Desserts",
