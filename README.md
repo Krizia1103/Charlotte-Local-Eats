@@ -140,4 +140,4 @@ types/restaurant.ts   TypeScript types + allowed values
 
 ## Branding
 
-This guide uses a generic "consulting firm travel guide" visual style (deep navy, charcoal, off-white, electric-blue accent). It intentionally does **not** include any McKinsey logos, marks, or proprietary assets. Add your own approved branding if desired.
+This guide uses a polished Charlotte dining-guide visual style with deep navy, charcoal, off-white, and electric-blue accents. Add your own approved branding if desired.
