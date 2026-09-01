@@ -39,8 +39,7 @@ export default function MealTabBar({
           Find a place to eat
         </h2>
         <p className="text-sm leading-6 text-slate">
-          Browse detailed local recommendations for colleagues, clients, and team
-          breaks.
+         Browse detailed recommendations from your Charlotte Office Services Team.
         </p>
       </div>
 
