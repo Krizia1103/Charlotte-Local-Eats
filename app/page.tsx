@@ -53,8 +53,7 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="mt-4 max-w-md text-sm leading-6 text-white/78">
-              Local breakfast, lunch, dinner, and dessert spots for colleagues,
-              clients, and team breaks.
+              Local breakfast, lunch, dinner, and dessert spots for colleagues and team breaks.
             </p>
             <div className="mt-7">
               <HomeSearch />
