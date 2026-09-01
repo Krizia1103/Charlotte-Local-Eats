@@ -43,7 +43,7 @@ export default function HomePage() {
           <div className="max-w-xl">
             <div className="flex items-center gap-2.5">
               <span aria-hidden className="rule-accent" />
-              <p className="eyebrow text-accent-bright/90">McKinsey Restaurant Guide</p>
+              <p className="eyebrow text-accent-bright/90">Charlotte Restaurant Guide</p>
             </div>
             <h1 className="font-display mt-4 text-[34px] font-semibold leading-[1.08] drop-shadow-sm sm:text-5xl">
               Charlotte Office{" "}
